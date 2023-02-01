@@ -4,9 +4,8 @@
 \input{macros}
 \input{letterfonts}
 
-\title{\Huge{Title\\subtitle}}
-\author{\huge{Name}}
-\date{date}
+\title{\Huge{Homework 1\\Mathematical and Computational Modeling of Infectious Diseases}}
+\author{\huge{Taiske Colclasure}}
 
 \begin{document}
 
@@ -14,13 +13,11 @@
 \newpage% or \cleardoublepage
 % \pdfbookmark[<level>]{<title>}{<dest>}
 \pdfbookmark[section]{\contentsname}{toc}
-\tableofcontents
 \pagebreak
 
 
-\chapter{SIR Modeling}
-\section{}
-\qs{1}{
+\section{1}
+\qs{}{
 The goal of this problem is to get you over any barriers with (i) getting Python set up, (ii), getting the
 SIR model implemented in a Forward Euler solver, and (iii) getting matplotlib set up.
 Write a function in Python that uses the Forward Euler method to simulate the SIR model. Check your
@@ -28,11 +25,69 @@ work by first reproducing the three plots from Figure 1 of the Week 2 lecture no
 are: N = 1000, I0= 1, S0= 999, with
 \begin{itemize}
         \item{$\beta  = 1$,  $\gamma =  .5$}
-        \item{$\beta  = 1$,  $\gamma =  .5$}
-        \item{$\beta  = 1$,  $\gamma =  .5$}
+        \item{$\beta  = 1.5$,  $\gamma =  .5$}
+        \item{$\beta  = 2$,  $\gamma =  .5$}
 \end{itemize}
 Show that your code works by simply reproducing the plots exactly, but with your first name included
 in the legend labels, e.g. “S Dan”, “I Dan” or something. Link to your code and turn in simply the 3
 plots.
 }
+\includegraphics[scale=.55]{SIR_model_beta-1_gamma-0.5}
+\includegraphics[scale=.55]{SIR_model_beta-1.5_gamma-0.5}
+\\
+\begin{center}
+        \includegraphics[scale=.55]{SIR_model_beta-2_gamma-0.5}       
+        \url{https://github.com/TaiskeColclasure/csci4830_colclasure/blob/main/ForwardEulerSim.py}
+\end{center}
+\newpage
+
+
+\section{}
+\qs{}{
+The goal of this problem is to show an important fact about transition rates in compartmental models.
+It is also a good chance to become refreshed on simple ODE solving and separation of variables.
+Finally, it makes good on a promise made in Week 2’s lecture notes to ask this homework question!
+\\
+Imagine that we are interested in SIR dynamics, but everyone starts out either infected or recovered,
+and no one starts out susceptible.
+\begin{itemize}
+        \item[a.]Use this information to simplify the typical equation for $\dot{I}$.
+        \item[b.]Solve your simplified differential equation with the initial condition $I(0)=I_{0}$
+        \item[c.]Manipulate your solution to derive the fraction of the initially infected people who are still infected.
+        \item[d.]Discuss this equation. What does it do over time? How is it related to the fraction of infected people who have left the infected class?
+        \item[e.]Use your results to write an equation for the fraction of initially infected people who are still in the infected state at time t.
+        \item[f.]This formula produces values between 0 and 1, and it tells us the probability that a ran  omly chosen infected person is still infected at time t. In other words, you have written a cumulative distribution function or CDF, telling us the probability that someone is infected for at least t units of time. Take a derivative of this function to turn your CDF into a PDF. Then, find out what this famous probability distribution is called, and write down its expected value.
+        \item[g.]se your results to explain how the recovery rate γ is related to the typical amount of t me a person remains infectious.
+\end{itemize}
+}
+\begin{itemize}
+                \begin{item}[a)]
+                        Here we will take the base equation $\dot{I} = \frac{\beta S I}{N} - \gamma I$ and substitute 0 for S.
+                        \begin{flalign}
+                                \dot{I} & = \frac{\beta 0 I}{N} - \gamma I\\
+                                        & = -\gamma I
+                        \end{flalign}
+                        This makes sense because if there is no S population to flow into I, this leaves only the negative flow of people recovering leaving the I compartment.\\
+                        \sol $- \gamma I$
+                \end{item}
+                \begin{item}[b)]
+                        To start this problem we will express $\dot{I}$ as $\frac{dI}{dt}$ to solve for  $I(t)$
+                        \begin{align*}
+                                \frac{dI}{dt} & =-\gamma I & \text{seperate variables}\\
+                                \frac{dI}{I} & = -\gamma dt \\
+                                \int \frac{dI}{I} & = \int -\gamma dt & \text{integrate both sides}\\
+                                \ln I + C & = -\gamma t + D \\ 
+                                \ln  I & = -\gamma t + a & \text{ here a represents arbitrary constant = D-C  now solve for I} \\
+                                I & = e^{-\gamma t +  a} & \text{simplify}\\
+                                I & = e^{a}*e^{-\gamma  t} & \text{$e^a$ represents a constant and in the  case of this function} \\
+                                  &  & \text{the I intercept or initial conditions}\\
+                                I(t) & = I_0e^{-\gamma t} \\
+                        \end{align*}
+                        \sol $I(t) = I_0e^{-\gamma t}$
+                \end{item}
+                \newpage
+                \begin{item}[c)]
+                        hehe
+                \end{item}
+\end{itemize}
 \end{document}

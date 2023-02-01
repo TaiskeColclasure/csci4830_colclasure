@@ -9,7 +9,7 @@ R=0
 t = 0
 timeCap = 50
 gamma = .5
-betta = 1
+betta = 2
 deltaT = .5
 
 #Conntainers
@@ -25,7 +25,7 @@ def displayResults():
     plt.plot(tBucket, rBucket, label = "R taiske")
     plt.legend()
     plt.title('SIR model with beta: {}  and gamma: {}'.format(betta, gamma))
-    plt.savefig('SIR_model_beta-{}_gamma:_{}.jpg'.format(betta, gamma))
+    plt.savefig('SIR_model_beta-{}_gamma-{}.jpg'.format(betta, gamma))
 
 def calcForwardStep():
     incidents = (betta * sBucket[-1] * iBucket[-1]) / N
