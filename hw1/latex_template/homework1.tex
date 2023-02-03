@@ -93,7 +93,47 @@ and no one starts out susceptible.
                        \sol $e^{-\gamma t}
                 \end{item}
                 \begin{item}[d)]
-                        In this model there is no susceptible population to flow into the infected catagory to  off set the people flowing out by recovering. So we would expect to  see this function go to  0 as $\lim_{t\to\infty} e^{-\gamma t}$
+                        In this model there is no susceptible population to flow into the infected catagory to  off set the people flowing out by recovering. So we would expect to  see this function go to  0 as $\lim_{t\to\infty} e^{-\gamma t}$. Additionally we as $\gamma$ increases towards  1 the function approaches 0 faster. Intuitivly this makes sense as if gamma represents a rate of recovery than a greater value would mean the population would leave the  infected compartment faster. In the context of this question the population can only exist in one of two catagories, Infected or Recovered. So if the function in the previous part represents the proportion  of currently infected people over initially infected its expected that the recovered proportions would be $1-\frac{I}{I_0}$\\
+                        \sol $1-e^{-\gamma t}$
+                \end{item}
+                \begin{item}[e)]
+                        This function is the CDF of recovery, At infinity the  proportion of  recovered is 1 or 100\% and at $t=0$: 0 since no one  from  $I_0$ has recovered. To get the PDF we will take the derivative of the CDF.
+                        \begin{align*}
+                                P(r\leq t)  & = 1-\gamma e^{-\gamma t} \\
+                                \frac{d}{dt}P(r\leq t) & = \frac{d}{dt}1-e^{-\gamma t} \\
+                                P(r@t) & = \gamma e^{-\gamma t} \\
+                        \end{align*}
+                        This is a Exponential Probability distribution which has an expected value of $\frac{1}{\gamma}$\\
+                        \sol $\frac{1}{\gamma}$
+                \end{item}
+                \begin{item}[f)]
+                        \begin{sol}
+                                If you consider the function $\frac{1}{\gamma}$ it would make sense as the average duration  of infection. If $\gamma$ was to be 0 then the average individual would never require this is the x axis asymptote, on the other hand if $\gamma$ was 1 then the average person would recover  within the smallest time unit of the simulation.
+                        \end{sol}
                 \end{item}
 \end{itemize}
+\newpage
+\qs{}{
+        The goal of this problem is to (i) figure out how to solve the final epidemic size equation, and (ii) test
+the equation’s predictions.
+\begin{itemize}
+        \item[a.] First, explain how an epidemic’s total size, also called its cumulative incidence, is related to $s_{\infty}$ and $r_{\infty}$.
+        \item[b.] Recall that r∞ = 1 −e−R0r∞. Though we can’t solve this equation, we can use a valuable graphical technique: if we set f(r∞) = r∞ and g(r∞) = 1 −e−R0r∞, we can plot both f(r∞) vs r∞ and g(r∞) vs r∞, and see where f = g. Create four plots for R0∈ {0.9,1.0,1.1,1.2} with f in black and g in red. Use the fsolve function to find the intersection point, and use matplotlib’s scatter function to plot a blue circle at the intersection 
+        \item[c.] Comment on what you see in the plots in the context of what we have learned about R0. What do you see in your figures? What happens when $R_0 < 1$?
+        \item[d.] Finally, test the predictions made by this final size equation by using your SIR code and $\beta = 1, \gamma = 0.5$ by creating a new version of that epidemic with a green dotted line at the height of $r_\infty$. Does this final size prediction work?
+\end{itemize}
+}
+\begin{itemize}
+        \item[a)] If $r_\infty$ represents the proportion of the population that has recovered from an infection at the "end of time" and $s_\infty$ being the suseptible population at the same time. The change between suseptible to recovered will equall the cumulative incidence."\\ \sol the change from s to r
+                \begin{item}[b)]
+                        \includegraphics[scale=.32]{1rInf}
+                        \includegraphics[scale=.32]{2rInf}\\
+                        \includegraphics[scale=.32]{3rInf}
+                        \includegraphics[scale=.32]{4rInf}
+                \end{item}
+        \item[c)] From the plots we can derive  the relationship that as the  likelyhood of secondary infections increases we  see a larger  proportion of the population end up in the recovered category as time goes to infinity. This makes sense as the more infectious a disease is the more  people it will infect before it has reached peak spread.If $R_\infty$ is less than one the disease cannot spread fast enough to infect anyone and $R_\infty$ is expected to be 0.
+                \begin{item}[d)]
+                        As shown by the figure this does do a good job of representing our model but that does not tell us about the real world accuracy of this measure more of a check that our math and assumptions are correct.
+                        \includegraphics[scale=.7]{finalPlot}
+                \end{item}
 \end{document}
