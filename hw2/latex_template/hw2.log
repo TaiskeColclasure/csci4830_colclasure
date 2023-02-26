@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  16 FEB 2023 23:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  25 FEB 2023 19:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**Round1.tex
-(./Round1.tex
+**hw2.tex
+(./hw2.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2021/10/04 v1.4n Standard LaTeX document class
@@ -1069,47 +1069,47 @@ File: tikzlibraryshadows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/local/texlive/2022/texmf-dist/tex/latex/titlesec/titletoc.sty
 Package: titletoc 2021/07/05 v2.14 TOC entries
 \ttl@leftsep=\dimen329
-)) (./macros.tex) (./letterfonts.tex) (./Round1.aux)
-\openout1 = `Round1.aux'.
+)) (./macros.tex) (./letterfonts.tex) (./hw2.aux)
+\openout1 = `hw2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 11.
-LaTeX Font Info:    Trying to load font information for OML+npxmi on input line 11.
+LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 10.
+LaTeX Font Info:    Trying to load font information for OML+npxmi on input line 10.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/newpx/omlnpxmi.fd
 File: omlnpxmi.fd 2013/03/21 Fontinst v1.933 font definitions for OML/npxmi.
 )
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/npxexa/m/n on input line 11.
-LaTeX Font Info:    Trying to load font information for U+npxexa on input line 11.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/npxexa/m/n on input line 10.
+LaTeX Font Info:    Trying to load font information for U+npxexa on input line 10.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/newpx/unpxexa.fd
 File: unpxexa.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxexa.
 )
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for LMS/npxsy/m/n on input line 11.
-LaTeX Font Info:    Trying to load font information for LMS+npxsy on input line 11.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for LMS/npxsy/m/n on input line 10.
+LaTeX Font Info:    Trying to load font information for LMS+npxsy on input line 10.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/newpx/lmsnpxsy.fd
 File: lmsnpxsy.fd 2016/07/04 Fontinst v1.933 font definitions for LMS/npxsy.
 )
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for LMX/npxexx/m/n on input line 11.
-LaTeX Font Info:    Trying to load font information for LMX+npxexx on input line 11.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for LMX/npxexx/m/n on input line 10.
+LaTeX Font Info:    Trying to load font information for LMX+npxexx on input line 10.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/newpx/lmxnpxexx.fd
 File: lmxnpxexx.fd 2016/07/04 Fontinst v1.933 font definitions for LMX/npxexx.
 )
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1164,10 +1164,10 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 11.
-LaTeX Info: Redefining \ref on input line 11.
-LaTeX Info: Redefining \pageref on input line 11.
-LaTeX Info: Redefining \nameref on input line 11.
+Package hyperref Info: Link coloring ON on input line 10.
+LaTeX Info: Redefining \ref on input line 10.
+LaTeX Info: Redefining \pageref on input line 10.
+LaTeX Info: Redefining \nameref on input line 10.
 \c@lstlisting=\count466
  (/usr/local/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
@@ -1180,158 +1180,87 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 14.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+npxmia on input line 14.
+LaTeX Font Info:    Trying to load font information for U+npxmia on input line 13.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/newpx/unpxmia.fd
 File: unpxmia.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxmia.
 )
-LaTeX Font Info:    Trying to load font information for U+npxsym on input line 14.
+LaTeX Font Info:    Trying to load font information for U+npxsym on input line 13.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/newpx/unpxsym.fd
 File: unpxsym.fd 2015/03/21 Fontinst v1.933 font definitions for U/npxsym.
 )
-LaTeX Font Info:    Trying to load font information for U+npxsyc on input line 14.
+LaTeX Font Info:    Trying to load font information for U+npxsyc on input line 13.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/newpx/unpxsyc.fd
 File: unpxsyc.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxsyc.
 ) [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
-(Font)              using `OT1/cmr/bx/n' instead on input line 17.
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 27.
 
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-(./Round1.toc
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-./Round1.toc:11: Misplaced alignment tab character &.
-<argument> ...berline {2.3}Current Global Burden &
-                                                   Distribution}\hyper@linkend 
-l.11 ...bal Burden & Distribution}{4}{section.2.3}
-                                                  %
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+<./images//deltaT2.png, id=50, 462.528pt x 346.896pt>
+File: ./images//deltaT2.png Graphic file (type png)
+<use ./images//deltaT2.png>
+Package pdftex.def Info: ./images//deltaT2.png  used on input line 30.
+(pdftex.def)             Requested size: 254.39117pt x 190.79338pt.
+<./images//deltaT1.png, id=52, 462.528pt x 346.896pt>
+File: ./images//deltaT1.png Graphic file (type png)
+<use ./images//deltaT1.png>
+Package pdftex.def Info: ./images//deltaT1.png  used on input line 30.
+(pdftex.def)             Requested size: 254.39117pt x 190.79338pt.
+<./images//deltaThalf.png, id=53, 462.528pt x 346.896pt>
+File: ./images//deltaThalf.png Graphic file (type png)
+<use ./images//deltaThalf.png>
+Package pdftex.def Info: ./images//deltaThalf.png  used on input line 30.
+(pdftex.def)             Requested size: 254.39117pt x 190.79338pt.
 
-./Round1.toc:11: Misplaced alignment tab character &.
-<argument> ...berline {2.3}Current Global Burden &
-                                                   Distribution}\hyper@linkend 
-l.11 ...bal Burden & Distribution}{4}{section.2.3}
-                                                  %
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-)
-\tf@toc=\write5
-\openout5 = `Round1.toc'.
+Overfull \hbox (44.56946pt too wide) in paragraph at lines 30--32
+[][] []
+ []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.19 
-      [1
+l.37 \item[c)]
+              {\sol \href{https://google.com}{link}} [1 <./images//deltaT2.png> <./images//deltaT1.png> <./images//deltaThalf.png>]
+<./images//brug.png, id=72, 462.528pt x 346.896pt>
+File: ./images//brug.png Graphic file (type png)
+<use ./images//brug.png>
+Package pdftex.def Info: ./images//brug.png  used on input line 39.
+(pdftex.def)             Requested size: 254.39117pt x 190.79338pt.
 
-]
-Chapter 1.
+Underfull \hbox (badness 10000) in paragraph at lines 39--41
 
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 22.
+ []
 
-[2
-
-] [3]
-Chapter 2.
-./Round1.tex:46: Misplaced alignment tab character &.
-<argument> Current Global Burden &
-                                   Distribution
-l.46 ...tion{Current Global Burden & Distribution}
-                                                  
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `alignment tab' on input line 46.
-
-[4
-
-]
-Chapter 3.
-
-./Round1.tex:49: LaTeX Error: Unicode character ^^B (U+0002)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.49 \section{Methods}^^B
-                         
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./Round1.tex:52: LaTeX Error: Unicode character ^^B (U+0002)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.52 \section{Efficacy}^^B
-                          
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-[5
-
-]
-Chapter 4.
-[6
-
-] (./Round1.aux)
+[2 <./images//brug.png>] (./hw2.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
  ) 
 Here is how much of TeX's memory you used:
- 36863 strings out of 478268
- 738576 string characters out of 5846347
- 1100490 words of memory out of 5000000
- 54390 multiletter control sequences out of 15000+600000
- 493886 words of font info for 96 fonts, out of 8000000 for 9000
+ 36721 strings out of 478268
+ 735977 string characters out of 5846347
+ 1099038 words of memory out of 5000000
+ 54256 multiletter control sequences out of 15000+600000
+ 495966 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 96i,7n,102p,558b,1712s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on Round1.pdf (7 pages, 98951 bytes).
+ 96i,7n,102p,452b,1369s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/NewPXMI_gnu.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/pxsys.pfb>
+Output written on hw2.pdf (3 pages, 191725 bytes).
 PDF statistics:
- 225 PDF objects out of 1000 (max. 8388607)
- 159 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 313 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 134 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
+ 6 named destinations out of 1000 (max. 500000)
+ 193 words of extra memory for PDF output out of 10000 (max. 10000000)
 

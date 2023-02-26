@@ -1,0 +1,49 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{Homework 2\\Mathematical and Computational Modeling of Infectious Diseases}}
+\author{\huge{Taiske Colclasure}}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\pagebreak
+
+\section{}
+\qs{}{The goal of this problem is to develop flexibility with your Forward Euler code, and to learn a bit
+about the effect of step size on the accuracy of the solution.
+\begin{itemize}
+        \item[a]{Using your Forward Euler method, simulate the solution to the normalized SIS model discussed in class (Week 3) using $\beta = 3$ and $\gamma = 2$ and with $(s_0,i_0) = (.99, .01)$. Create three plots n each plot, show only your solution’s $I(t)$ in red solid line, labeled as Forward  Euler, and then also plot the  analytical solution from class in a black dashed line, labeled as Analytical}
+        \item[b]{Comment on what you see in your three plots. How does the step size affect our solution?}
+        \item[c]{Define the maximum absolute error for a simulation using a particular $\Delta t$ as $$E(\Delta t) = max_t|I_{Euler \Delta t}(t) - I_{analytical}(t)|$$ Write a function that runs the appropriate simulation, computes the analytical solution, and returns E without plotting. Share a link to your code for this problem.}
+        \item[d]{Create a plot on log-log axes showing $E(\Delta t)$ vs $\Delta t$ for values $$\Delta t \in \{ 2, 1, \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}, \frac{1}{32} \}$$}
+\end{itemize}
+}
+\begin{itemize}
+        \item[a)]{
+                \includegraphics[scale=.55]{deltaT2} \includegraphics[scale=.55]{deltaT1} \includegraphics[scale=.55]{deltaThalf}
+        }
+        \item[b]{
+                \begin{sol}
+                      In the first graph the difference in the euler sim and closed form calculation is most apparent. As $\Delta t$ decreases the euluer line fits the analytical line better. 
+                \end{sol}
+        }
+\item[c)]{\sol \href{https://google.com}{link}}
+        \item[d)]{
+                \includegraphics[scale=.55]{brug}\\
+        }
+        \item[e)]{
+
+                \begin{sol}
+                        Above we can see what looks to be a negative linear relationship. This  would suggest that if we continue the trend of decreasing $\Delta t$ then the error in our simulation will in turn decrease. However, decreasing our step size increases our computational complexity. Depending on how quickly results are needed or the access to computational power the ethics of using a model with error can be justly weighed.
+                \end{sol}
+        }
+\end{itemize}
+
+\end{document}
