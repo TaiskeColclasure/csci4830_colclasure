@@ -15,7 +15,6 @@
 \pdfbookmark[section]{\contentsname}{toc}
 \pagebreak
 
-\section{}
 \qs{}{The goal of this problem is to develop flexibility with your Forward Euler code, and to learn a bit
 about the effect of step size on the accuracy of the solution.
 \begin{itemize}
@@ -23,18 +22,27 @@ about the effect of step size on the accuracy of the solution.
         \item[b]{Comment on what you see in your three plots. How does the step size affect our solution?}
         \item[c]{Define the maximum absolute error for a simulation using a particular $\Delta t$ as $$E(\Delta t) = max_t|I_{Euler \Delta t}(t) - I_{analytical}(t)|$$ Write a function that runs the appropriate simulation, computes the analytical solution, and returns E without plotting. Share a link to your code for this problem.}
         \item[d]{Create a plot on log-log axes showing $E(\Delta t)$ vs $\Delta t$ for values $$\Delta t \in \{ 2, 1, \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}, \frac{1}{32} \}$$}
+        \item[e]{Comment on what you observe in this plot, and comment on cases when you would want a
+larger or smaller step size, and why? Imagining yourself in an advisory position in your com-
+munity, can you think of any scenario where there is a connection between the step size of your
+simulation and the ethics of your advice?}
 \end{itemize}
 }
 \begin{itemize}
         \item[a)]{
-                \includegraphics[scale=.55]{deltaT2} \includegraphics[scale=.55]{deltaT1} \includegraphics[scale=.55]{deltaThalf}
+                \begin{center}
+                        \includegraphics[scale=.45]{deltaT2}
+                        \includegraphics[scale=.45]{deltaT1}
+                        \includegraphics[scale=.45]{deltaThalf}
+                \end{center}
+                
         }
         \item[b]{
                 \begin{sol}
                       In the first graph the difference in the euler sim and closed form calculation is most apparent. As $\Delta t$ decreases the euluer line fits the analytical line better. 
                 \end{sol}
         }
-\item[c)]{\sol \href{https://google.com}{link}}
+\item[c)]{\sol \href{https://github.com/TaiskeColclasure/csci4830_colclasure/blob/main/hw2/FowardEulerSim2.py}{lines 69-71}}
         \item[d)]{
                 \includegraphics[scale=.55]{brug}\\
         }
@@ -45,5 +53,32 @@ about the effect of step size on the accuracy of the solution.
                 \end{sol}
         }
 \end{itemize}
+\newpage
+\qs{}{
+        The goal if this problem is to confront the differences between the LM and ANM of vaccination. A secondary goal is to give you a chance to get creative in how you draw connections between relevant real-world questions and the models we discuss in class.\\
+        "Good news, everyone!” remarks the chair of your vaccine rollout committee. It is early 2031, and you are on a team considering policy choices around vaccination for your community in the middle of a pandemic. “Our vaccines are in and they have $VE = 0.8$ she continues. Everyone claps because that number seems pretty high. “As you know, we’ve got a tough road ahead. We have enough vaccines for only 50\% of our population, we don’t know whether we should think of this as a Leaky or All-or-Nothing vaccine, and we’re not sure if the latest variant will have $R_0 = 3$, $R_0 = 4$, $R_0 = 5$. Still, it looks like the typical infection is lasting 14 days, which is the same for all variants.”
+        \begin{itemize}
+                \item[a]{Assuming SIR dynamics and no prior infections in your community, do you have any hope of reaching herd immunity through vaccination, given what you know? Why or why not?}
+        \item[b]{Someone pipes up in the back of the meeting “Hey how many people are going to become infected anyway, even with the vaccine, when this wave rolls through?” You immediately sense that this is something you can answer, because you have taken Computational and Mathematical Modeling of Infectious Diseases, and recall that HW 2 Question 2 was something like this... Your daydreaming about class is interrupted: “...and do we care if we’re using the Leaky or All-or-Nothing model, or what the value of R0 is?” You reply... [please write 3 sentences of what you might say to your colleague in the meeting].}
+        \item[c]{After the meeting, your chair comes up to you, and in a way you cannot refuse, kindly says, “I liked what you said about how we might think about the differences between the different vaccine models, and how they might interact with R0 in our little community of 300,000. Can I ask you to write up a quick one-page summary with a few graphs to show how much the model does or doesn’t matter in our scenarios?” OOOOF you think: it is the future and so you were hoping to go electric-snowboarding, but this one-pager is important. [Write the one-pager that helps a mathematically savvy person from the general public to understand your projections about infections in all three R0 scenarios and using both vaccine models. Be sure to include an executive summary sentence at the top of the report so your chair and read it aloud at a press conference if someone asks!]}
 
+\end{itemize}
+}
+\begin{itemize}
+        \item[a)]{Given that the formula for the proportion of the population needed  for herd immunity is $v = \frac{1}{\text{VE}}(1-\frac{1}{R_0})$ in the best case scenario with $R_0 = 3$ the minimum proportion needed would be $\approx$83\%. This is well above the available supply of vaccines. However, in this hypothetical scenario the vaccine is being rolled out in the "middle" of the pandemic we can assume that there is a naturally existing recovered population. Say that the proportion of recovered people was at least 33\% and vaccine distribution policy ensured distribution to only suseptible people heard immunity could be reached. If this hypothetical vaccine distribution policy could exist then heard immunity would be easier to reach with greater values of $R_0$ since by the time the vaccine is being distrubuted a larger proportion of the population will have recoverd by then.}
+        \item[b)]{The LM and ANM show similar conclusions graphically when VE and $R_0$ are not on the extereme cases. If this upcoming variant has a significantly larger $R_0$ the LM will show the increased force of infection to a greater degree than the ANM. While it is hopeful to think that the vaccine is a ANM as the existance of variants with greater forces of infection would point towards a LM.}
+        \item[c)]{\sol next page}
+\end{itemize}
+\newpage
+\begin{center}
+        \huge{Leaky Model vs All or Nothing Model}
+\end{center}
+While similar mathmatical conclusions can be drawn from both models such as herd immunity thresholds the two models start to stray when considering diseases with different forces of inffection. Since the All or Nothing  model provides perfect immunity to VE percent of the suseptible proportion. This inturn ensures that the maximum people available to infect is $s_0 + v_0(1-\text{VE})$. This means that by design the Leaky model will always have more people available to infect than the All or Nothing model. When modeling diseased with mild forces of infection often times the disease will die out before the entire suseptible population gets moved to the recovered compartment.\textbf{As the force of infection increases the larger  population  of suseptible people in the Leaky model will result in a greater number of total infections.}
+\begin{center}
+        \includegraphics[scale=.4]{r3}
+        \includegraphics[scale=.4]{r4}
+        \includegraphics[scale=.4]{r5}
+        \href{https://google.com}{Source Code}
+\end{center}
+The graphs above show three different simulations each with increasing $R_0$. The dashed lines represent the compartmental values associated with the All or nothing model. In the first graph notice how the two models barely differ. Take note of the difference between the Recovered proportion at $T_{\infty}$. Only $\beta$ was changed to achieve the increased $R_0$. By the third graph the difference is significantly greater than seen in the first. This is the visualization of the disease begin able to reach more of the suseptible population before it runs its course.
 \end{document}
