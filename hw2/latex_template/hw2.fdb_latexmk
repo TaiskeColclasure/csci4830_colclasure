@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1677473307 "hw2.tex" "hw2.pdf" "hw2" 1677473310
+["pdflatex"] 1677473370 "hw2.tex" "hw2.pdf" "hw2" 1677473373
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1246382020 924 9904cf1d39e9767e7a3622f2a125a565 ""
@@ -256,8 +256,8 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1675134376 2826435 1004c202423da7d0507d5d259eb7067c ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "hw2.aux" 1677473309 971 29fcf75dbce81da1e48b94563b2bb0c8 "pdflatex"
-  "hw2.tex" 1677473306 9092 e3070192135ee26b4a80e909576639d2 ""
+  "hw2.aux" 1677473372 971 29fcf75dbce81da1e48b94563b2bb0c8 "pdflatex"
+  "hw2.tex" 1677473368 9159 9f842e60d734f7d10e3b984cbb02a9d0 ""
   "images//brug.png" 1677377146 25693 3daa17cf6b116f20538c22ef1355b76c ""
   "images//deltaT1.png" 1677373115 24278 8c4e5f622b8978b73fa3ab5613b65bfb ""
   "images//deltaT2.png" 1677373185 29536 0450aa84d509009de74e6071ae8c69f4 ""
