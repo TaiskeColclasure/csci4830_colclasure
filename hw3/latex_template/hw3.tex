@@ -1,0 +1,99 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{Homework 3\\Mathematical and Computational Modeling of Infectious Diseases}}
+\author{\huge{Taiske Colclasure}}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\pagebreak
+\qs{}{
+        The goal of this problem is to get you thinking about the constraints on population contact structure and contact matrices.
+        \begin{itemize}
+                \item[a.]{As one who is interested in modeling disease transmission on college campuses, you hire two teams to measure contact patterns on a nearby campus. The first team, led by Dan Pemic, tells you that there are 200 faculty and 1800 students, with a contact matrix of\\
+                                $$C= (3.1 & 43.5 \\ 4.7 & 25.)$$
+                The second team, led by Flynn Uenza, tells you that there are 210 faculty and 1750 students,
+with a contact matrix of\\
+                
+                $$C=()$$
+                Whom do you trust more, Dan Pemic or Flynn Uenza? Explain your reasoning in words and
+include any calculations used to arrive at your conclusions.
+                        }
+        \end{itemize}
+}
+\begin{sol}
+        For this solution, the first matrix will be referred to as DP and the second as FU. The survey completed by the DP team found the campus to have a staff-to-student ratio of $\frac{1}{9}$.Staff members make at least 3 contacts with other staff members per day, while students have an average of 25 internal contacts. The contact rate from staff to students is 43.5, and from students to staff, it is 4.7. Based on the student-to-staff contact rate and the structure of schools, we can assume that students take an average of 4-5 classes. A rough conclusion can be made that class sizes are around $\frac{43.5}{4.7}$\\
+       The FU team has a very similar conclusion in their contact matrix, but the main difference arises when looking at the faculty/student reporting. In this context, there is a higher ratio of teachers to students, which makes their contact network less believable. Using the same methods as above, even larger class sizes would be estimated. Which does not align with their survey results.
+\end{sol}
+\newpage
+\qs{}{
+        The goal of this problem is to explore the prefferntial depletion of suseptibles.\\
+        Consider a population with four equal-sized groups, numbered 1,2,3,4. Suppose that the contact structure in the population is fully mized (i.e. $c_{ij} = \overline{c}$ for all i, j), that $\gamma_{i} = 3$ for all i, and that $R_0 = 1.5$, under SIR dynamics. Finally, suppose that the susceptivility for group i, p_i is equal to i, e.g. $p_2=2$ and $p_4=4$\\
+        \begin{itemize}
+                \item[a.]{What is the next-generation matrix for this system?}
+                \item[b.]{To ensure that $R_0 = 1.5$, what must $\overline{c}$ be equal to?}
+                \item[c.]{Using these parameters, code up a version of your model with initail conditions $s_0=0.999$ and $i_0 =0.001$ in each group. Simulate an epidemic wave using an appropriate timestep $\Delta t$ and appropriate maximum simulation time to capture the wave. Create a plot of the four populations' I compartments vs time, shoing $i_1(t), i_2(t), i_3(t), i_4(t)$. Color these curves in a single hue, but with varying levels of light/dark saturation, such that the boldest and darkest line is the most susceptible group, and the faintest and lightest line is the least susceptible group.}
+                \item[d.]{Define the average susceptibility among the susceptibles at any point in time $\overline{p}(t)$ as (given in hand out). Note that this is simply a weighted average of the susceptibilites of the susceptibles, by adding up the susceptibilities in the numberator and dividing by the number of susceptibles in the denominator. Over the same time window as your previous plot, create two additioal figures: First, show $s_i(t)$ for each i = 1,2,3,4 usingg the same color scheme as before. Second show $\overline{p}(t)$ in black}
+                \item[e.]{Comment on what you observe in the plots, and explain the reason for the patterns in words that a high school student could understand.}
+                \item[f.]{Reflect on these plots in the context of the COVID-19 pandemic. What lessons are there to be drawn from the relationship between an epidemc wave and different groups with different susceptibilities?}
+        \end{itemize}
+}
+\begin{itemize}
+        \item[a)]{
+                \begin{sol}
+                \begin{pmatrix}
+                        \frac{S_1}{N_1}\frac{1 * \overline{c}}{3} & \frac{S_1}{N_2}\frac{1 * \overline{c}}{3} & \frac{S_1}{N_3}\frac{1 * \overline{c}}{3} & \frac{S_1}{N_4}\frac{1 * \overline{c}}{3}\\
+                        \frac{S_2}{N_1}\frac{2 * \overline{c}}{3} & \frac{S_2}{N_2}\frac{2 * \overline{c}}{3} & \frac{S_2}{N_3}\frac{2 * \overline{c}}{3} & \frac{S_2}{N_4}\frac{2 * \overline{c}}{3}\\
+                        \frac{S_3}{N_1}\frac{3 * \overline{c}}{3} & \frac{S_3}{N_2}\frac{3 *\overline{c}}{3} & \frac{S_3}{N_3}\frac{3 * \overline{c}}{3} & \frac{S_3}{N_4}\frac{3 * \overline{c}}{3}\\
+                        \frac{S_4}{N_1}\frac{4 * \overline{c}}{3} & \frac{S_4}{N_2}\frac{4 * \overline{c}}{3} & \frac{S_4}{N_3}\frac{4 * \overline{c}}{3} & \frac{S_4}{N_4}\frac{4 * \overline{c}}{3}
+                \end{pmatrix}
+                \end{sol}
+                }
+        \item[b)]{From the above NGM we can derive 4 eigen values where the largest will be are closest measure of $R_0$. The derived eigen values listed in order of their respective compartments are 0, 0, 0, and $\frac{10\overline{c}}{3}$ we will only focus on the largest value which represent the infection coming from the most susceptible compartment\\
+                        \begin{flalign}
+                                R_0 = \frac{10\overline{c}}{3}\\
+                                1.5 = \frac{10\overline{c}}{3}\\
+                                4.5 = 10\overline{c}\\
+                                \overline{c} = 0.45
+                        \end{flalign}
+                        \sol 0.45
+        }
+        \item[c)]{I was unable to debug the a matrix multiplication issue in my code. This bug caused the sim to run normally for the first 5 time steps but at the 6th timestep the the negative sDot values to flip and become positive despite there being no inherit inflow to the suseptible population. I believe this is an error with the way I am calculating the inverse $\omega$ diagonal matrix. As I understand the if the for compartments hold equal populations then the expected matrix would be \begin{pmatrix} 4 & 0 & 0 & 0 \\ 0 & 4 & 0 & 0 \\ 0 & 0 & 4 & 0 \\ 0 & 0 & 0 & 4\end{pmatrix}. Either this interpretation of the inverse $\omega$ matrix is incorrect or I have multiplication by an unexpected negative value in my code that I didn't have time to find during my debugging session. Regardless of the simualation I will discuss expect results bellow\\
+        The graph should show the susceptibles from the compartment 4 depleting the fastest compared to the other compartments at first. As the I population grows towards its peak the apparent immunity of the first compartment will appear as if it is weakening. This is because the number  of contacts with infected people is at a peak. Once the peak of the I population starts to taper the immunities of the First and Second compartments start to show up again as their are not overwhelmed with a lot of contacts with infectected individuals.
+        }
+        \item[d)]{The average susceptibility will be at a global maximun at the start of the simmulation and will taper down over time. The rate in which the susceptibility changes will be at the greatest in the beginning of the simulation as the fourth compartment is "draining" at a very fast rate. As the weaker immunity compartments start to wain the average susceptibility will stop moving downward and reach point with a small negative slope. This point in time represents the part in a epidemic where the most susceptible people have caught and or recovered from the disease and the only susceptible people left have the higher rate of natural immunity. This drastically affects the number of new cases per timestep as the disease now only has "difficult"  transmision availble to it}
+         \item[e)]{The reason why the average susceptibility of a disease decreases over time is because naturally as individuals we have different factors that lead our immunities to a disease. At the start of the epidemic a virus has a lot of options of who to travel to, by the nature of immunity those who have a lower immunity will catch the disease at a greater rate. This means the most vulnerable population is expected to catch the disease before the rest of the population. However, by infecting them first the disease eliminates its preffered hosts and makes transmission more difficult. Think about buying a large variety pack of chips at Costco. When you first get the package and you have a lot of Doritos, you probably find yourself eating more bags of chips per day, but as you run out of Doritos you will probably eat less bags of Sun Chips per day. If you plotted this bags/day metric as you consumed your favorite varieties it will show a similar relationship to the average susceptibility of a population}
+         \item[f)]{In the case of COVID-19 I remember seeing a similar effect with the observed death rate of the virus decreasing. While I know susceptibility and individual morbidity should not be conflated they are co-related. As a lot of the causes for increase susceptibility also affect ones ability to survive a disease in a negative way. At the start of the outbreak and the exteremly susceptible people were hospitalized the death rate was at an all time high. However, over time this rate decreased. This could be a result of multiple factors such as increased treatment effectiveness but it was also a result of the depleted population of highly susceptible/vulnerable people. As the disease was forced to infect the healthier population they started to present to the hospital more often and in turn decreasing the morbidity of the disease.}
+\end{itemize}
+\newpage
+\qs{}{
+        \begin{itemize}
+                \item[a.]{Write code for a branching process that,  starting from a single infection, draws G generations, with each infection creating $NB(R_0,k)$ additional infections. Use your code to estimate q the probability that an epidemic dies in finite time, for $R_0 = 3$ and k = 0.1,0.5,1.0,5.0, adn 10.0. Provided your answers in a table, to 3 decimals places.}
+        \end{itemize}
+}
+\begin{itemize}
+        \item[a)]{Here the simulation ran 10,000 different outbreaks and averaged across to estimate q.\\
+              \begin{sol}
+                      \begin{bmatrix}
+                              0.1 & 0.5 & 1.0 & 5 \\
+                              0.3562 & 0.7188 & 0.8387 & 0.9594
+                              %0.3562 & 0.7188 & 0.8387 & 0.9594
+                      \end{bmatrix}
+              \end{sol}
+             }
+     \item[b)]{When k is low (super spreading) only a few of the infection actually pass the disease off to other people however they pass it off to a high number of individuals. This is observed with a low probability of an outbreak. This is most likely explained by the fact that the disease has a high probability to not spread from the few infected individuals in the early generations. Once the infections count has crested a certain point an outbreak is guaranteed but the disease has a harder time reaching said critical mass when dispersion is high. As k increases the early infected individuals will pass off the infection to more people on average and therefore has an easier time reaching the critical infected threshold}
+     \item[c)]{The simulation ran with $\gamma=.5$ and $k=0.1$ and ran for a `100,000 rounds. Given the q estimation from part a we can expect 30,000 of the rounds to be of finite size. In the finite size outbreaks the max infection count was tracked. Based on the histograms density the majority of finite size outbreaks die in the second generation. Diseases that proliferated to above 4 infectect individuals still had a slight chance of dying out. No diese that spread to atleast 9 people died out infinite time. The tail of this distribution can be spreak by increasing the value of $\gamma$.
+                \begin{center}
+                        \includegraphics[scale=.5]{true}
+                \end{center}
+
+             }
+\end{itemize}
+\end{document}

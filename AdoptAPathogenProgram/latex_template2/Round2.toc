@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {0.1}Morphology and Size}{2}{section.0.1}%
+\contentsline {section}{\numberline {0.2}Taxonomic Data}{2}{section.0.2}%
+\contentsline {section}{\numberline {0.3}Mode of Transmission}{2}{section.0.3}%
+\contentsline {section}{\numberline {0.4}Natural History of the Disease}{2}{section.0.4}%
+\contentsline {section}{\numberline {0.5}Diagnosis}{2}{section.0.5}%
+\contentsline {section}{\numberline {0.6}History of Discovery}{2}{section.0.6}%
+\contentsline {section}{\numberline {0.7}History of Burden}{2}{section.0.7}%
+\contentsline {section}{\numberline {0.8}Counter Measures}{3}{section.0.8}%
+\contentsline {section}{\numberline {0.9}Paper Review}{3}{section.0.9}%
+\contentsline {section}{\numberline {0.10}Transmission Simulation}{3}{section.0.10}%
+\contentsfinish 

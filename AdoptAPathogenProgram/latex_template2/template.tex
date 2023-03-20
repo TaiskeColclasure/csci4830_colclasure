@@ -1,0 +1,24 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{Title\\subtitle}}
+\author{\huge{Name}}
+\date{date}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+
+\chapter{SIR Modeling}
+\section{}
+\qs{something}{another}
+\end{document}

@@ -1,0 +1,54 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{Adopt a Pathogen}\\Lyme Disease}
+\author{\huge{Taiske Colclasure}}
+\date{}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+\section{Morphology and Size}
+Lyme Disease is caused by the Borrelia bacterium. This is a species of spiral-shaped bacteria that are generally 20-30 micrometers long. The two key parts of the bacteria are the peptidoglycan propulsion system that allows the bacteria to be mobile while moving in a corkscrew motion, and the outer surface protein (Osp). The Osp plays an important role in camouflaging the bacteria from the host's immune response.
+
+\section{Taxonomic Data}
+The Borrelia bacterium species consists of roughly 20 members, with three main subclassifications. An interesting fact is that approximately half of the species cause Lyme disease, while the other half cause Relapsing Fever. All members of this family live parasitic lives within systems composed of at least two different species of hosts.
+
+\section{Mode of Transmission}
+Lyme disease is spread through vectors, with the primary vector being ticks in their questing stage. The bacteria that causes Lyme disease prefer spending winters in larger mammal hosts, while small rodents are the preferred hosts in the summer. The bacteria uses ticks primarily as a means of transportation, rather than as a reservoir.
+
+\section{Natural History of the Disease}
+The disease was first made a public fear in the eastern United States around the 1950. After its discovery, the true prevalence of the bacteria was found globally, as variants were identified shortly thereafter. Lyme disease became a public fear that the US dealt with by spraying pesticides. This approach was ineffective in stopping an endemic state, but the campaign had a significant impact on the surrounding ecosystems, and tick populations in these areas quickly recovered. Whether the campaign prevented an outbreak is debatable. While cases are primarily localized to the eastern US, there are still around 400,000 cases of Lyme disease reported annually in the US.
+
+\section{Diagnosis}
+Lyme disease is often diagnosed based solely on symptoms, as they can manifest quickly and be noticeable even to non-healthcare professionals. During the early stages of the disease, before the onset of flu-like symptoms, a rash may appear around the location of the tick bite. However, one significant complication of Lyme disease is the autoimmune response it can trigger, which may persist long after the bacteria has left the host. This can make it more challenging to diagnose the cause of any autoimmune issues that may arise in the host.
+
+\section{History of Discovery}
+Lyme disease is an ancient disease, with the oldest written account dating back to the 1700s in Scotland. The first genetic evidence of the disease was found in the Ice Man specimen, suggesting that the bacteria has been using humans as a reservoir for longer than recorded history. Despite this, the disease did not become a major health concern until it was introduced to the tick population in the United States. Unlike ticks in Europe, the US tick population is larger and more concentrated, which may have contributed to the higher incidence of Lyme disease in the US.
+
+\section{History of Burden}
+The burden of Lyme disease is primarily concentrated in the United States due to two reasons. Firstly, when the bacteria was introduced to North America, it likely encountered a reservoir of hosts larger than any it had previously encountered. Historians believe that the size of the tick population in the northeastern United States is a result of colonial-era farming practices of early Americans. Despite attempts to control the tick population through pesticide spraying campaigns, the long-term population size of ticks remained largely unaffected.
+
+\section{Counter Measures}
+Currently, countermeasures for Lyme disease largely rely on individual responsibility to avoid ticks and remove them in a timely manner. Other approaches have been attempted, including mass pesticide spraying campaigns to deter tick populations, but these are often ineffective due to their impact on the environment or the rapid recovery of tick populations. Another approach has been to focus on vaccination, which had some interesting results. From 1998 to 2002, a commercially available vaccine called LymeRix was introduced, but it was unapproved by the FDA due to market pressure from a class action lawsuit against the manufacturer. The lawsuit arose after a recipient developed autoimmune complications similar to those seen in Lyme disease recovery. However, no study has conclusively linked the vaccine to these issues, and the manufacturer still stands behind the vaccine to this day. It's worth noting that Pfizer acquired the patents to a protein subunit vaccine in 2020 and is planning to conduct human testing soon. Despite these efforts, the most effective prevention method remains removing ticks within minutes of being bitten, as it can take hours for the bacteria to transfer from tick to host.
+\section{Paper Review}
+The paper I will be focussing on is "Modeling Lyme disease transmission" by Yijun Lou and Jianhong Wu.\\
+Source: \href{https://www.sciencedirect.com/science/article/pii/S0022519312003904}{Modeling Lyme disease transmission} by Yijun Lou and Jianhong Wu.
+\section{Transmission Simulation}
+In this paper, Lyme disease is modeled as an expansion of a tick population model. The complex lives of ticks are recognized as three distinct phases; however, due to developmental differences expressed through behaviors like questing, the author broke their life cycle into seven compartments. All tick compartments were doubled to represent the infected ticks with each stage. Additionally, two compartments for infected and uninfected hosts were incorporated. Transmission occurred in two directions: from infected hosts to either questing larvae or nymphs, or from infected questing nymphs to uninfected hosts.\\
+\begin{center}
+        \includegraphics[scale=0.25]{network}
+        \includegraphics[scale=0.25]{bird}
+\end{center}
+One of the key insights of this paper was the role of migratory birds in tick population dynamics. The later sections of the paper focused less on case counts and more on tick population counts. The researchers set up a situation where two environments existed for the ticks: one where the population thrived under optimal climate conditions/seasonality, and another with a simulated force of death. This toxic environment was tuned to a point where only a minority of ticks would reach sexual maturity and the population was guaranteed to die out.\\
+The introduction of a host class that travels between the two environments in a seasonal nature, representing migratory birds common in North America, had a significant impact on the ability to sustain a positive equilibrium population within the toxic environment. This means that the effective environment for ticks is greatly expanded by the presence of migratory birds. Additionally, pesticide campaigns are entirely useless when applied on a local scale and too dangerous to be applied on any larger scale.\\
+\end{document}
